@@ -20,6 +20,15 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING
       },
+      rol_id: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : 
+            'Rols' 
+        ,
+          key : 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

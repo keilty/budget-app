@@ -11,6 +11,15 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      transaction_type_id: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : 
+            'Transaction_types' 
+        ,
+          key : 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
