@@ -9,6 +9,7 @@ const cors = require('cors')
 // Routers
 const usersRouter = require('./routes/users');
 const categoriesRouter = require('./routes/categories');
+const transactionsRouter = require('./routes/transactions');
 
 
 const app = express();
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // API Routers
 app.use('/api', categoriesRouter);
 app.use('/api', usersRouter);
+app.use('/api', transactionsRouter);
 
 
 // catch 404 and forward to error handler
